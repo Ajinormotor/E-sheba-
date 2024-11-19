@@ -4,8 +4,11 @@
 
 import { Link } from "react-router-dom"
 import logo from "/image/E-sheba_logo.svg"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import MobileHeader from "./MobileHeader"
 
+
+import { debounce } from "lodash";
 
 const nav_link = [
     {
@@ -36,32 +39,28 @@ const nav_link = [
 
 ]
 
-const Header = ({toggleMenu,setToggleMenu}) => {
+const Header = () => {
 
+
+    const [toggleMenu, setToggleMenu] = useState(false)
 
     const headerRef = useRef(null)
 
-    useEffect(()=>{
-        const handleHeader = () => {
-            
-
-            if( document.documentElement.scrollTop > 70|| document.body.scrollTop > 70 ){
-                headerRef.current.classList.add("header_shrink")
-            } else{
-                headerRef.current.classList.remove("header_shrink")
-            }
-
-        }
-
+    useEffect(() => {
+        const handleHeader = debounce(() => {
+          if (document.documentElement.scrollTop > 70 || document.body.scrollTop > 70) {
+            headerRef.current.classList.add("header_shrink");
+          } else {
+            headerRef.current.classList.remove("header_shrink");
+          }
+        }, 100); // Debounce interval
+    
         window.addEventListener("scroll", handleHeader);
-
         return () => {
-
-            window.removeEventListener("scroll", handleHeader);
-        }
-
-    },[])
-
+          window.removeEventListener("scroll", handleHeader);
+        };
+      }, []);
+   
     const handleToggleMenu = () => {
         setToggleMenu((prev) => !prev)
       
@@ -69,7 +68,20 @@ const Header = ({toggleMenu,setToggleMenu}) => {
 
     
   return (
-<section ref={headerRef} className=" w-full max-w-[1300px]  flex items-center justify-between h-auto p-[20px] md:px-[2rem]   md:pt-[1rem]">
+<section ref={headerRef}   className={`sticky top-0 z-[1500] w-full max-w-[1300px]  p-[15px] md:p-0   flex flex-col 
+items-center justify-between  md:px-8 transition-all ${
+    toggleMenu ? "header_shrink" : ""
+  }`}>
+
+
+
+<div className={`${toggleMenu? "block fixed z-[200] w-full top-[79px] left-0" : "hidden"}`}>
+  <MobileHeader toggleMenu={toggleMenu}  setToggleMenu={setToggleMenu} />
+  </div>
+
+
+<div className="flex items-center w-full py-[0.2rem] md:p-[20px] justify-between px-[0.5rem]">
+
 
     <div className="">
   <img src={logo}  alt=""  className="w-[124px] h-[42px]"  />
@@ -104,6 +116,7 @@ const Header = ({toggleMenu,setToggleMenu}) => {
 
 
 }
+    </div>
     </div>
 
 </section>

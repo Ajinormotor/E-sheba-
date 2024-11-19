@@ -1,37 +1,28 @@
 import BottomHero from "./BottomHero"
-import Header from "./ui/Header"
 import hero_arrow from "/image/hero_pics.svg"
 import location_icon from "/image/location_icon.svg"
 import doctor_icon from "/image/doctor_Icon.svg"
 import search_icon from "/image/bi_search.svg"
-import MobileHeader from "./ui/MobileHeader"
-import { useState } from "react"
+
+
 
 
 
 const Hero = () => {
-const [toggleMenu, setToggleMenu] = useState(false)
-
-
 
 
 
   return (
-<section className="flex flex-col bg-lightBlue-0 w-full h-screen max-w-[1300px]">
+<section className="flex flex-col bg-lightBlue-0 w-full max-w-[1300px]  h-[90vh] md:h-[85vh]">
 
- {toggleMenu && <div className="bg-black opacity-[50%] fixed z-[200] md:hidden inset-0"></div>  }
+ 
 
 
 <div className="flex flex-col">
 
 
-<div className={`${toggleMenu && " fixed z-[2000] w-full bg-white shadow-md " }`}>
-  <Header  toggleMenu={toggleMenu}  setToggleMenu={setToggleMenu} />
-  </div>
 
-  <div className={`${toggleMenu? "block fixed z-[200] w-full top-[80px]" : "hidden"}`}>
-  <MobileHeader toggleMenu={toggleMenu}  setToggleMenu={setToggleMenu} />
-  </div>
+
  
  
 </div>
@@ -116,13 +107,13 @@ const [toggleMenu, setToggleMenu] = useState(false)
   </div>
 
 {/* image div */}
-<div className="bg-moonBlue-0 max-w-[750px] h-[600px]  rounded-[50%] w-full absolute opacity-[50%] right-0  z-[5]"></div>
+<div className="bg-moonBlue-0 max-w-[750px] h-[600px]  rounded-[50%] w-full absolute opacity-[50%] right-0  hidden md:block z-[5]"></div>
 
   </div>
   
 
 
-  <div className="max-w-full w-full lg:mt-[1.5rem] z-10">
+  <div className="max-w-full w-full  z-10">
     <BottomHero />
   </div>
 

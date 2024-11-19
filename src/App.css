@@ -5,28 +5,17 @@
 
 *{
   font-family: "IBM Plex Sans", sans-serif;
-  padding: 0px;
-  margin: 0px;
 }
 
 .header_shrink{
-  background: white;
+  left: 0;
+  top: 0;
   position: fixed;
-  width: 100%;
-  top: 0px;
-  z-index: 10000;
-  transition:  background 0.2s ease-in;
+  background: white;
   box-shadow: 5px 2px 5px 5px gray;
-  height: auto;
-  padding-top: 30px;
+  width: 100%;
+  z-index: 10000;
 
+  
 }
 
-@media (max-width: 450px){
-  .header_shrink{
-    height: 110px;
-    position: fixed;
-    top:0px;
-    padding-top: 35px;
-  }
-} 
