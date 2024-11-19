@@ -1,7 +1,8 @@
 
 import './App.css'
 import Footer from './component/ui/Footer'
-import Routs from './routs/Routs'
+import Routs from './routing/routs'
+
 
 function App() {
 
