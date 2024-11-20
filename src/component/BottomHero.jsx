@@ -15,15 +15,15 @@ const BottomHero = () => {
 
             <li className="h-[102px] border-[1px] border-white bg-white"></li>
 
-            <li className="flex flex-col items-center gap-[7px]">
-            <h1  className=" font-[700] md:text-[64px] md:leading-[83px] text-[30px] leading-[52px] text-white font-ibm"><CountUp  end={100} duration={2}  />+</h1>
+            <li className="flex flex-col items-center gap-[7px] pb-[1.2rem] md:pb-0">
+            <h1  className=" font-[700] md:text-[64px] md:leading-[83px] text-[30px] leading-[52px] text-white font-ibm"><CountUp  end={100} duration={4}  />+</h1>
             <p className=" font-[400] text-[16px] leading-[20px] text-white font-ibm">Doctors</p>
             </li>
 
             <li className="h-[102px] border-[1px] border-white bg-white"></li>
 
             <li className="flex flex-col items-center gap-[7px]">
-            <h1  className=" font-[700] md:text-[64px] md:leading-[83px] text-[30px] leading-[52px] text-white font-ibm"><CountUp end={1000000} duration={2}      
+            <h1  className=" font-[700] md:text-[64px] md:leading-[83px] text-[30px] leading-[52px] text-white font-ibm"><CountUp end={1000000} duration={4}      
                formattingFn={(value) => {
        
           if (value >= 1000000) return '1M+';

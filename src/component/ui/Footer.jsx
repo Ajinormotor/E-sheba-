@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import facebook from "../../../public/image/facebook.svg"
-import insta from "../../../public/image/insta.svg"
-import twitter from "../../../public/image/twitter.svg"
-import map from "../../../public/image/map.svg"
+import facebook from "/image/facebook.svg"
+import insta from "/image/insta.svg"
+import twitter from "/image/twitter.svg"
+import map from "/image/map.svg"
 
 const Footer = () => {
   return (

@@ -1,28 +1,28 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 const nav_link = [
   {
       id:"1",
-      path:"#",
+      path:"/",
       display: "Home"
 
   },
 
   {
       id:"2",
-      path:"#",
+      path:"/about",
       display: "About"
 
   },
   {
       id:"3",
-      path:"#",
+      path:"/application",
       display: "Application"
 
   }, {
       id:"4",
-      path:"#",
+      path:"/history",
       display: "History"
 
   },
@@ -37,11 +37,27 @@ const MobileHeader = () => {
 
 
 <div className="">
-    <ul className="flex  flex-col gap-[15px] w-full items-center justify-center">
-        {nav_link.map((n)=> (
-            <Link  key={n.id} to={n.path} className="text-shadyBlue-0 font-[400] text-[20px] leading-[26px]">{n.display}</Link>
-        ))}
-    </ul>
+     <ul className="flex flex-col text-center gap-[15px]">
+  {nav_link.map((n) => (
+
+<NavLink
+key={n.id}
+to={n.path}
+className={({ isActive }) =>
+  `relative font-[400] text-[20px] leading-[26px] font-ibm after:content-[''] 
+  after:absolute after:w-0 after:h-[2px] after:left-0 after:bottom-0 
+  after:transition-all after:duration-300 after:ease-in-out 
+  hover:after:w-full hover:text-normalBlue-0 ${
+    isActive
+      ? "text-normalBlue-0 after:w-full after:bg-normalBlue-0 font-[600]"
+      : "text-shadyBlue-0"
+  }`
+}
+>
+{n.display}
+</NavLink>
+))}
+</ul>
 </div>
 
 <div className="flex gap-[15px]">

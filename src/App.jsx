@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <div className='flex flex-col  overflow-x-hidden'>
+    <div className='flex flex-col items-center justify-center overflow-x-hidden'>
       <Header />
     <Routs />
  <Footer />

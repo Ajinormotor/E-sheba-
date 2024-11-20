@@ -3,23 +3,29 @@ import hero_arrow from "/image/hero_pics.svg"
 import location_icon from "/image/location_icon.svg"
 import doctor_icon from "/image/doctor_Icon.svg"
 import search_icon from "/image/bi_search.svg"
+import useHeroMotion from "../motion/useHeroMotion"
 
 
+import { motion } from "framer-motion" 
 
 
 
 const Hero = () => {
 
-
+const {itemVariant,containerVariant}  = useHeroMotion({delay:0.2})
 
   return (
 <section className="flex flex-col flex-grow bg-lightBlue-0 w-full max-w-[1300px] min-h-screen md:h-[85vh] relative">
   <div className="flex-grow flex flex-col justify-center items-center p-[5px] ">
 
-    <div className="flex flex-col gap-[20px] w-full items-start md:px-[2rem] z-10">
+    <motion.div   initial="hidden"
+    whileInView="visible"
+    exit="next"
+    variants={containerVariant} className="flex flex-col gap-[20px] w-full items-start md:px-[2rem] z-10">
       {/* First Div */}
       <div className="w-full gap-[35px] px-[0.5rem]">
-        <div className="flex flex-col">
+
+        <motion.div variants={itemVariant} className="flex flex-col">
           <h1 className="font-[700] md:text-[64px] md:leading-[83px] text-[35px] leading-[55px] text-darkBlue-0 font-ibm w-full">
             Find & Search Your
           </h1>
@@ -40,14 +46,15 @@ const Hero = () => {
               </h1>
             </li>
           </ul>
-        </div>
-        <p className="max-w-[419px] w-full font-[400] text-[16px] leading-[20px] text-blurBlue-0 font-ibm pt-[1rem]">
+        </motion.div>
+
+        <motion.p  variants={itemVariant} className="max-w-[419px] w-full font-[400] text-[16px] leading-[20px] text-blurBlue-0 font-ibm pt-[1rem]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
-        </p>
+        </motion.p>
       </div>
 
       {/* Second Div */}
-      <div className="bg-white lg:max-w-[590px] w-full h-[73px] flex rounded-[50px] items-center justify-around px-0.5rem]">
+      <motion.div variants={itemVariant} className="bg-white lg:max-w-[590px] w-full h-[73px] flex rounded-[50px] items-center justify-around px-0.5rem]">
         <div className="flex items-center">
           <img
             src={doctor_icon}
@@ -55,7 +62,7 @@ const Hero = () => {
             className="w-[16px] h-[16px] md:mr-2"
           />
           <select
-            className="rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-full w-[140px]"
+            className="rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-full w-[140px] bg-transparent"
             defaultValue=""
           >
             <option
@@ -78,7 +85,7 @@ const Hero = () => {
             className="w-[16px] h-[16px] md:mr-2"
           />
           <select
-            className="rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
             defaultValue=""
           >
             <option
@@ -101,17 +108,21 @@ const Hero = () => {
             className="w-[12px] h-[12px] md:w-[16px] md:h-[16px]"
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+      
+    </motion.div>
 
     {/* Image Div */}
-    <div className="bg-moonBlue-0 max-w-[750px] h-[600px] rounded-[50%] w-full absolute opacity-[50%] right-0 hidden md:block z-[5]"></div>
+    
+    <div className="bg-moonBlue-0 max-w-[800px] h-[400px] rounded-[50%] w-full absolute opacity-[50%] right-0 bottom-0 hidden md:block  "></div> 
+
   </div>
 
   {/* BottomHero aligned at the bottom */}
-  <div className="self-end w-full mb-[4.9rem]">
+  <div className="self-end w-full mb-[4.9rem] md:mb-0 z-[10]">
     <BottomHero />
   </div>
+
 </section>
 
   )
