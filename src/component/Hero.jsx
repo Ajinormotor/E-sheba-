@@ -13,8 +13,9 @@ const Hero = () => {
 
 
   return (
-<section className="flex flex-col flex-grow bg-lightBlue-0 w-full max-w-[1300px] h-[85vh]">
-  <div className="flex-grow flex flex-col justify-center items-center p-[5px]">
+<section className="flex flex-col flex-grow bg-lightBlue-0 w-full max-w-[1300px] min-h-screen md:h-[85vh] relative">
+  <div className="flex-grow flex flex-col justify-center items-center p-[5px] ">
+
     <div className="flex flex-col gap-[20px] w-full items-start md:px-[2rem] z-10">
       {/* First Div */}
       <div className="w-full gap-[35px] px-[0.5rem]">
@@ -108,7 +109,7 @@ const Hero = () => {
   </div>
 
   {/* BottomHero aligned at the bottom */}
-  <div className="self-end w-full">
+  <div className="self-end w-full mb-[4.9rem]">
     <BottomHero />
   </div>
 </section>
