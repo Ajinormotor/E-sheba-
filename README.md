@@ -45,6 +45,10 @@ Open http://localhost:3000 in your browser to view the project.
 
 Screenshots showcasing the landing page on desktop, tablet, and mobile devices will be added here.
 
+![Description of the image](public\image\E-sheba-mobile-view.png)
+![Description of the image](public\image\E-sheba-mobile-view.png)
+
+
 
 <h1 className="font-ibm font-semibold text-lg">Improvements and Assumptions:</h1>
   
