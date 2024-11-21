@@ -11,7 +11,7 @@ const Hero = () => {
   const { itemVariant, containerVariant } = useHeroMotion({ delay: 0.2 });
 
   return (
-    <section className="flex flex-col flex-grow bg-lightBlue-0 w-full max-w-[1300px] min-h-screen lg:min-h-full  md:h-[85vh] 2xl:h-[30vh] relative">
+    <section className="flex flex-col flex-grow bg-lightBlue-0 w-full max-w-[1300px] h-[91vh] lg:min-h-full  md:h-[85vh] 2xl:h-[30vh] relative">
       <div className="flex-grow flex flex-col justify-center items-center p-[5px] ">
         <motion.div
           initial="hidden"
@@ -34,10 +34,10 @@ const Hero = () => {
                   <img
                     src={hero_arrow}
                     alt="underline_icon"
-                    className="w-[68%] md:w-full md:h-[20px] h-[15px]"
+                    className="w-[60%] md:w-full md:h-[20px] h-[15px]"
                   />
                 </li>
-                <li className="ml-[-4.4rem] md:ml-0">
+                <li className="ml-[-4.7rem] md:ml-0">
                   <h1 className="font-[700] md:text-[64px] md:leading-[83px] text-[37px] leading-[57px] text-darkBlue-0 font-ibm">
                     Doctor
                   </h1>
@@ -121,9 +121,10 @@ const Hero = () => {
       </div>
 
       {/* BottomHero aligned at the bottom */}
-      <div className="self-end w-full mb-[4.9rem] md:mb-0 z-[10]">
+      <div className="self-end w-full  md:mb-0 z-[10]">
         <BottomHero />
       </div>
+
     </section>
   );
 };

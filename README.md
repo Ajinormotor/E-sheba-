@@ -1,5 +1,5 @@
 
-<h1 className="font-ibm font-semibold text-lg">Project Name:</h1> Medical Landing Page
+<h1 className="font-ibm font-semibold text-lg">Project Name:</h1> E-sheba Landing Page
 
 
 <h1 className="font-ibm font-semibold text-lg">Description:</h1>
@@ -26,7 +26,7 @@ Clone the repository:
 Install dependencies:
 - npm install  
 Start the development server:
-- npm start  
+- npm run dev  
 Open http://localhost:3000 in your browser to view the project.
 
 
@@ -52,12 +52,12 @@ Screenshots showcasing the landing page on desktop, tablet, and mobile devices w
 
 <h1 className="font-ibm font-semibold text-lg">Improvements and Assumptions:</h1>
   
-- Assumed the hover states and interactions from the Figma design would translate to smooth CSS transitions for buttons and links.
-- Future enhancements can include integrating an API for dynamic content and improving accessibility using ARIA attributes.
+- Improved Figma design by grouping the property for easy import and development.
+-Add a waitlist(conduct survey to know to target problems to solve) and making the login and sign up page dynamic.
 
 
 
 <h1 className="font-ibm font-semibold text-lg">Contact Information:</h1>
 
--For questions or feedback, feel free to reach out via email at  teiteiwisdom@gmail.com.
+- For questions or feedback, feel free to reach out via email at  teiteiwisdom@gmail.com.
 
