@@ -1,9 +1,9 @@
-import member_one from "../../public/image/member-one.svg"
-import member_two from "../../public/image/member-two.svg"
-import member_three from "../../public/image/member-three.svg"
-import member_four from "../../public/image/member-four.svg"
-import member_five from "../../public/image/member-five.svg"
-import member_six from "../../public/image/member-six.svg"
+import member_one from "/image/member-one.svg"
+import member_two from "/image/member-two.svg"
+import member_three from "/image/member-three.svg"
+import member_four from "/image/member-four.svg"
+import member_five from "/image/member-five.svg"
+import member_six from "/image/member-six.svg"
 
 export const testimonialdata = [
     {

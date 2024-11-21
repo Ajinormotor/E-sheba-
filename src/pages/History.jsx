@@ -1,27 +1,25 @@
-import { Helmet } from "react-helmet"
-import gilf from "/image/eazy_gilf1.gif"
+import { Helmet } from "react-helmet";
+import gilf from "/image/eazy_gilf1.gif";
 
 const History = () => {
   return (
+    <section className=" flex flex-col items-center justify-center py-[2rem]">
+      <Helmet>
+        <title>E-sheba | History of E-sheba</title>
+        <meta name="description" content="" />
+      </Helmet>
 
-  <section className=" flex flex-col items-center justify-center py-[2rem]">
+      <div className="">
+        <img src={gilf} alt="about_gilf" className="w-[] h-[]" />
+      </div>
 
-<Helmet>
-    <title>E-sheba | History of E-sheba</title>
-    <meta name="description" content=""  />
-</Helmet>
+      <div className="">
+        <h1 className=" font-[700] text-[40px] leading-[45px] text-black font-ibm text-center">
+          Page details coming soon.....
+        </h1>
+      </div>
+    </section>
+  );
+};
 
-
-    <div className="">
-        <img src={gilf} alt="about_gilf"  className="w-[] h-[]" />
-    </div>
-
-    <div className="">
-        <h1  className=" font-[700] text-[40px] leading-[45px] text-black font-ibm text-center">Page details coming soon.....</h1>
-    </div>
-
-  </section>
-  )
-}
-
-export default History
+export default History;
