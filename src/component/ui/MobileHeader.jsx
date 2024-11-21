@@ -51,14 +51,14 @@ const MobileHeader = () => {
       </div>
 
       <div className="flex gap-[15px]">
-        <button className="bg-transparent w-[122px] h-[51px] border-[1px] border-[#0360D9] rounded-[50px] flex items-center justify-center">
-          <h1 className=" font-[600] text-[20px] leading-[26px] text-normalBlue-0 font-ibm">
+        <button className="bg-transparent hover:bg-normalBlue-0 group w-[122px] h-[51px] border-[1px] border-[#0360D9] rounded-[50px] flex items-center justify-center">
+          <h1 className=" font-[600] text-[20px] leading-[26px] group-hover:text-white text-normalBlue-0 font-ibm">
             Log in
           </h1>
         </button>
 
-        <button className="bg-normalBlue-0 w-[122px] h-[51px] border-[1px] border-[#0360D9] rounded-[50px] flex items-center justify-center">
-          <h1 className=" font-[600] text-[20px] leading-[24px] text-white font-ibm">
+        <button className="bg-normalBlue-0 hover:bg-transparent group w-[122px] h-[51px] border-[1px] border-[#0360D9] rounded-[50px] flex items-center justify-center">
+          <h1 className=" font-[600] text-[20px] leading-[24px] group-hover:text-normalBlue-0 text-white font-ibm">
             Sign up
           </h1>
         </button>
